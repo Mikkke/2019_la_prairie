@@ -18,6 +18,39 @@
 <section>
   <h1>Welcome to my portfolio</h1>
   <p>Lorem ipsum machin truc j'aime Simplon.</p>
+  <form>
+    <label for="nom">Quel est votre nom ?</label>
+    <input type="text" name="nom" id="nom" required />
+    <label for="prenom">Quel est votre prénom ?</label>
+    <input type="text" name="prenom" id="prenom" required />
+    <label for="email">Quel est votre e-mail ?</label>
+    <input type="email" name="email" id="email" required />
+    <label for="age">Quel est votre âge ?</label>
+    <input type="number" name="age" id="age" value="18" min="3" max="99" />
+    <label for="phone">Quel est votre téléphone ?</label>
+    <input type="tel" name="phone" id="phone" maxlength="10" />
+    <label for="sexe">Quel est votre sexe ?</label>
+      <select name="sexe" id="sexe">
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+        <option value="intersexe">Intersexe</option>
+        <option value="autre">Autre</option>
+      </select>
+    <label for="couleur">Quelle est votre couleur préférée ?</label>
+    <input type="color" name="couleur" id="couleur" />
+    <label for="date">Quelle est la date ?</label>
+    <input type="date" name="date" id="date" value="" required />
+    <script>
+      document.getElementById('date').value = new Date().toISOString().slice(0, 10);
+    </script>
+    <label for="technologie">Quel est la technologie ?</label>
+      <select name="technologie" id="technologie">
+        <option value=""></option>
+      </select>
+    <label for="question">Quelle est votre question ?</label>
+    <textarea id="question" value="question" required /></textarea>
+    <input type="submit" value="Soumettre" />
+  </form>
 </section>
 <aside>
 </aside>
